@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+      <title>Range Slider</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+      <div class="range">
+            <div class="field">
+                  <input type="range" min="0" max="200" value="100" steps="1">
+                  <div class="value right">200</div>
+            </div>
+      </div>
+      <script>
+            const slideValue = document.querySelector(".right");
+            const inputSlider = document.querySelector("input");
+            inputSlider.oninput = (() => {
+                  let value = inputSlider.value;
+                  slideValue.textContent = value;
+            });
+
+      </script>
+
+</body>
+
+</html>
